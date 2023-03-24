@@ -1,0 +1,9 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <img src='{{product.product_img1.url}}' class="list">
+    <p class="listinfo">{{product.product_prices}} руб</p>
+    <h3 class="listinfo">{{ product.product_name }}</h3>
+    <p class="listinfo">{{product.product_info}}</p>
+{% endblock %}

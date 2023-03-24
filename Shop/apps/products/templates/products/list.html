@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+    <h1>Страничка с товарами</h1>
+{% endblock %}
+
+
+{% block content %}
+    <h2>Каталог товаров</h2>
+    {% if product %}
+        {% for product in product %}
+            <div class="test">
+                <img src='{{product.product_img1.url}}' alt="{{product_img1}}" class="row"  ><br>
+                <a href="{% url 'products:detail' product.id %}" class="row" >{{product.product_name}}</a><br>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
